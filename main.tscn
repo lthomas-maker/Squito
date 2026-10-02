@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://debo0vvoky2d4"]
+
+[ext_resource type="Script" uid="uid://2p4tyogk6rks" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cmo3fn3lxu0gu" path="res://Assets/Sprites/Mosquito/Squito Smiling.jpg" id="2_0xm2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu1wb"]
+size = Vector2(1223, 896)
+
+[node name="Main" type="Node2D" unique_id=1832144512]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=693837178]
+up_direction = Vector2(0.61844605, 0.7858273)
+script = ExtResource("1_ig7tw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1821944595]
+position = Vector2(-20.5, 19)
+shape = SubResource("RectangleShape2D_iu1wb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=910418755]
+position = Vector2(-25, 25)
+texture = ExtResource("2_0xm2m")
