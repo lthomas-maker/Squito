@@ -12,3 +12,17 @@ func _physics_process(delta):
 
 	velocity = direction * speed
 	move_and_slide()
+
+	# Horizontal wrapping
+	if position.x < -100:
+		position.x = 1252
+
+	if position.x > 1252:
+		position.x = -100
+
+	# Vertical wrapping
+	if position.y < -100:
+		position.y = 748
+
+	if position.y > 748:
+		position.y = -100

@@ -1,21 +1,31 @@
 [gd_scene format=3 uid="uid://debo0vvoky2d4"]
 
+[ext_resource type="Texture2D" uid="uid://0wn5l68gxwy4" path="res://Background/bedroom.jpg" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://2p4tyogk6rks" path="res://player.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://cmo3fn3lxu0gu" path="res://Assets/Sprites/Mosquito/Squito Smiling.jpg" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cy8kd6xsmqdfc" path="res://Assets/Sprites/Mosquito/Squito Thinking r.bg.png" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu1wb"]
-size = Vector2(1223, 896)
+size = Vector2(268, 148)
 
 [node name="Main" type="Node2D" unique_id=1832144512]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1779967607]
+position = Vector2(580, 324)
+scale = Vector2(0.6857143, 0.6875)
+texture = ExtResource("1_h2yge")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=693837178]
+position = Vector2(559, 321)
 up_direction = Vector2(0.61844605, 0.7858273)
 script = ExtResource("1_ig7tw")
 
+[node name="SquitoThinkingR_bg" type="Sprite2D" parent="Player" unique_id=2005213402]
+position = Vector2(239, -112)
+scale = Vector2(0.1595238, 0.15677966)
+texture = ExtResource("3_h2yge")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1821944595]
-position = Vector2(-20.5, 19)
+position = Vector2(241, -112)
 shape = SubResource("RectangleShape2D_iu1wb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=910418755]
-position = Vector2(-25, 25)
-texture = ExtResource("2_0xm2m")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1103009098]
